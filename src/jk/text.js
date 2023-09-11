@@ -39,7 +39,12 @@ export default function nav(props)
       </ul>
      
     </div>
-    <button class="btn btn-danger" onClick={props.toggle}>{props.mode}</button>
+    {/* <button class="btn btn-danger" onClick={props.toggle}>{props.mode}</button> */}
+    <div className="form-check form-switch" onClick={props.toggle}>
+  <input className="form-check-input"  type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+  <label className="form-check-label" for="flexSwitchCheckDefault">{props.mode}</label>
+</div>
+
       </nav>
   
 

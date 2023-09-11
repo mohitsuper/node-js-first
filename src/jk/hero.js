@@ -4,7 +4,7 @@ export default function Hero(props) {
 
   return (
 
-    <div className={`heros position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-${props.mode} text-${props.modetext}
+    <div className={`heros position-relative overflow-hidden text-center bg-${props.mode} text-${props.modetext}
     `}>
     <div className="col-md-5 p-lg-5 mx-auto my-5">
       <h1 className="display-4 font-weight-normal">Punny headline</h1>

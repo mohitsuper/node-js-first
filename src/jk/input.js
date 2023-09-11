@@ -34,12 +34,12 @@ const clicklow = () => {
     
     
 return (
-    <div className={`bg-${props.mode} text-${props.modetext}`}>
+    <div className={`bg-${props.mode} text-${props.modetext}  mb-0`}>
    
     <h1 >{props.heading}</h1>
 <div className={`container bg-${props.mode}`}>
             
-        <div className={"form-group ${dark}"}>
+        <div className={`form-group bg-$S{dark}`}>
         <label for="exampleFormControlTextarea1">Example textarea </label>
         <textarea className={"form-control bg-${dark}"} id="exampleFormControlTextarea1" rows="3"   placeholder='message' value={text}  onChange={changes}></textarea>
         </div>

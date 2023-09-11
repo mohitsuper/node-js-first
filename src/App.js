@@ -2,7 +2,7 @@
 import React , {useState} from 'react';
 import './apps.css';
 import Hero from "./jk/hero";
-
+import Alert from './jk/alert';
  import Text from './jk/text';
  import Input from './jk/input';
  import About from './jk/about';
@@ -16,17 +16,17 @@ function App() {
 
 
   const [mode,setMode] = useState("dark");
-  const [modetext,setModetext] = useState("muted");
+  const [modetext,setModetext] = useState("light");
   const [heading,setHeading] = useState("light");
   
   const [d_text, setD_text] = useState();
   const mood = () =>{
     if(dark.color == "#333"){
       setDark({
-        backgroundColor: "#222",
+        backgroundColor: "red",
         color :"#fff",
       } )
-      setMode("dark");
+      setMode("light");
       setD_text("Light");
     }
 
@@ -49,13 +49,14 @@ function App() {
     }
     else{
       setMode("dark");
-    setModetext("muted"); 
+    setModetext("light"); 
     }
   }
    return (
    
     <div className="root" id="root" style={dark}> 
     <Text logo="hello" mode={mode}  toggle={toggle} />
+    <Alert mode={mode}/>
     <Hero mode={mode} toggle={toggle} modetext={modetext} />
     
        <Input heading="enter the text change formted" mode= {mode} modetext={modetext} toggle={toggle}/>
